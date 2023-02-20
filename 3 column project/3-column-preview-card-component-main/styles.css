@@ -1,0 +1,271 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  display: grid;
+  place-content: center;
+  padding:1.5rem;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root{
+    --fg-bgcolor: hsl(31, 77%, 52%);
+    --sg-bgcolor: hsl(184, 100%, 22%);
+    --tg-bgcolor: hsl(179, 100%, 13%);
+    --grid-pcolor: hsla(0, 0%, 100%, 0.75);
+    --grid-bg-head-but-color: hsl(0, 0%, 95%);
+
+
+   /* fonts class */
+    --fs-body: 0.9375rem;
+
+    --ff: 'Big Shoulders Display', cursive;
+    --ff-paragraph: 'Lexend Deca', sans-serif;
+    --ff-heading: var(var(--ff-paragraph));
+    --ff-button: var(--ff-paragraph);
+    --fw-regular: 400;
+    --fw-bold:700;
+    
+
+    --border-radius: 0.5rem;
+}
+
+.column > *{
+   padding: 2rem;
+}
+
+.flex-columns{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.icon-sedans {
+    width:50px;
+}
+.icon-suvs{
+  width:50px;
+}
+
+.icon-luxury{
+    width:50px;
+}
+.bg-color1{
+  background-color: var(--fg-bgcolor);
+ /* border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);  */
+}
+.bg-color2{
+  background-color: var(--sg-bgcolor);
+}
+.bg-color3{
+  background-color:var(--tg-bgcolor) ;
+ /* border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius); */
+  
+}
+.color1{
+    color: var(--fg-bgcolor);
+  }
+.color2{
+    color: var(--sg-bgcolor);
+  }
+.color3{
+    color:var(--tg-bgcolor) ;
+}
+.heading__bold{
+    font-weight: var(--fw-bold);
+    font-size: 1.5rem;
+   font-family: var(--ff-heading);
+   text-transform:uppercase;
+   color:var(--grid-bg-head-but-color);
+
+}
+.paragraph__regular{
+    font-weight: var(--fw-regular);
+    font-size:var(--fs-body);
+    color: var(--grid-pcolor);
+    font-size: var(--fs-body);
+    font-family: var(--ff-paragraph);
+}
+.btn{
+    width:120px;
+    padding-inline:1.2rem;
+    text-align:center;
+    border: 1px solid var(--grid-bg-head-but-color);
+    padding-block:.74rem;
+    border-radius:1.2rem;
+}
+.btn:hover{
+  cursor: pointer;  
+  background-color: var(--ff-button);
+
+  backdrop-filter: blur(1rem);
+}
+
+@media  ( width >= 1440px){
+  body{
+     overflow-y: hidden;
+    position:relative;
+   
+    
+  }
+    :root{
+        --fg-bgcolor: hsl(31, 77%, 52%);
+        --sg-bgcolor: hsl(184, 100%, 22%);
+        --tg-bgcolor: hsl(179, 100%, 13%);
+        --grid-pcolor: hsla(0, 0%, 100%, 0.75);
+        --grid-bg-head-but-color: hsl(0, 0%, 95%);
+    
+    
+       /* fonts class */
+        --fs-body: 0.9375rem;
+    
+        --ff: 'Big Shoulders Display', cursive;
+        --ff-paragraph: 'Lexend Deca', sans-serif;
+        --ff-heading: var(var(--ff-paragraph));
+        --ff-button: var(--ff-paragraph);
+        --fw-regular: 400;
+        --fw-bold:700;
+        
+    
+        --border-radius: 0.5rem;
+    }
+      
+    .column{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      grid-template-rows: repeat(3,1fr);
+    
+    }
+
+     .column > * {
+        position:relative;
+        top:12rem;
+        left:0;
+
+         
+     }
+    .flex-columns{
+        display:flex;
+        flex-direction: column;
+        gap:2rem;
+    }
+    
+    .icon-sedans {
+        width:50px;
+    }
+    .icon-suvs{
+      width:50px;
+    }
+    
+    .icon-luxury{
+        width:50px;
+    }
+    .bg-color1{
+      background-color: var(--fg-bgcolor);
+      border-top-left-radius: var(--border-radius);
+      border-bottom-left-radius: var(--border-radius);
+    }
+    .bg-color2{
+      background-color: var(--sg-bgcolor);
+    }
+    .bg-color3{
+      background-color:var(--tg-bgcolor) ;
+      border-top-right-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+    }
+    .color1{
+        color: var(--fg-bgcolor);
+      }
+    .color2{
+        color: var(--sg-bgcolor);
+      }
+    .color3{
+        color:var(--tg-bgcolor) ;
+    }
+    .heading__bold{
+        font-weight: var(--fw-bold);
+        font-size: 1.5rem;
+       font-family: var(--ff-heading);
+       text-transform:uppercase;
+       color:var(--grid-bg-head-but-color);
+    
+    }
+    .paragraph__regular{
+        font-weight: var(--fw-regular);
+        font-size:var(--fs-body);
+        color: var(--grid-pcolor);
+        font-size: var(--fs-body);
+        font-family: var(--ff-paragraph);
+        line-height: 2.0;
+        margin-bottom: 3.0rem;
+    }
+    .btn{
+        width:120px;
+        padding-inline:1.2rem;
+        text-align:center;
+        border: 1px solid var(--grid-bg-head-but-color);
+        padding-block:.74rem;
+        border-radius:1.2rem;
+        font-family:var(--ff-paragraph);
+    }
+    .btn:hover{
+      cursor: pointer;
+      background-color: var(--ff-button);
+      color:  white;
+      backdrop-filter: blur(1rem);
+      font-family: var(--ff-paragraph);
+    }
+
+
+}
